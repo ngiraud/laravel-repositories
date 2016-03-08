@@ -92,8 +92,9 @@ abstract class Repository implements RepositoryInterface {
 		return $this->model->create($attr);
 	}
 
-	public function update(array $data, $id, $attribute="id") {
-		return $this->model->where($attribute, '=', $id)->update($data);
+	public function update($id, $data) {
+		$model = self::find($id);
+		return $model->update($data);
 	}
 
 	public function delete($id) {

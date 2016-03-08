@@ -19,7 +19,7 @@ interface RepositoryInterface {
 
 	public function create(array $attr);
 
-	public function update(array $data, $id, $attribute="id");
+	public function update($id, $data);
 
 	public function delete($id);
 }
