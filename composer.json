@@ -1,5 +1,5 @@
 {
-    "name": "repositories",
+    "name": "ngiraud1/repositories",
     "description": "Laravel abstract repositories and more",
 	"require": {
 		"php": ">=5.4.0",
