@@ -1,8 +1,7 @@
 <?php
 namespace NGiraud\Repositories\Repositories;
 
-use Doctrine\DBAL\Exception\ReadOnlyException;
-use NGiraud\Repositories\RepositoryInterface;
+use NGiraud\Repositories\Interfaces\RepositoryInterface;
 use NGiraud\Repositories\RepositoryException;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Container\Container as App;
