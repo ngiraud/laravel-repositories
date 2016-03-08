@@ -1,5 +1,5 @@
 {
-    "name": "Repositories",
+    "name": "repositories",
     "description": "Laravel abstract repositories and more",
 	"require": {
 		"php": ">=5.4.0",
