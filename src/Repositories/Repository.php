@@ -9,7 +9,7 @@ use Illuminate\Container\Container as App;
 abstract class Repository implements RepositoryInterface {
 
 	/**
-	 * @var App
+	 * @var App test
 	 */
 	private $app;
 
