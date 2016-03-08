@@ -2,6 +2,7 @@
 namespace NGiraud\Repositories\Interfaces;
 
 interface RepositoryInterface {
+
 	public function query($limit=false, $order=false, $attr=false);
 
 	public function get($limit=false, $order=false, $attr=false);
@@ -16,9 +17,9 @@ interface RepositoryInterface {
 
 	public function paginate($nb);
 
-	public function create($attr);
+	public function create(array $attr);
 
-	public function update($id, $attr);
+	public function update(array $data, $id, $attribute="id");
 
 	public function delete($id);
 }
