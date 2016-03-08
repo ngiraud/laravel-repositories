@@ -70,7 +70,7 @@ abstract class Repository implements RepositoryInterface {
 
 	public function findOrNew($id) {
 		if(!is_numeric($id) || $id <= 0)
-			return new News();
+			return $this->model;
 
 		return $this->model->findOrNew($id);
 	}
