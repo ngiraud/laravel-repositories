@@ -98,7 +98,8 @@ abstract class Repository implements RepositoryInterface {
 	}
 
 	public function delete($id) {
-		return $this->model->destroy($id);
+		$removed = $this->model->destroy($id);
+		return ($removed == 1) ? true : false;
 	}
 
 	/**
