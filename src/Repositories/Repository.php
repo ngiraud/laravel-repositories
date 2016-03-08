@@ -57,11 +57,11 @@ abstract class Repository implements RepositoryInterface {
 	}
 
 	public function get($limit=false, $order=false, $attr=false) {
-		return self::query($limit, $order, $attr, $type)->get();
+		return self::query($limit, $order, $attr)->get();
 	}
 
-	public function count($attr=false, $type=self::ALL) {
-		return self::query(false, false, $attr, $type)->count();
+	public function count($attr=false) {
+		return self::query(false, false, $attr)->count();
 	}
 
 	public function find($id) {
