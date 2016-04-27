@@ -82,7 +82,7 @@ abstract class Repository implements RepositoryInterface {
 		$query = self::query(false, false, $attr);
 
 		if($failIfEmpty === false)
-			return $query->firstOrNew();
+			return $query->first();
 
 		return $query->firstOrFail();
 	}
