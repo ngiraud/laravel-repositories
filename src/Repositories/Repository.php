@@ -75,11 +75,15 @@ abstract class Repository implements RepositoryInterface {
 		return $this->model->findOrNew($id);
 	}
 
-	public function findByAttr($attr) {
+	public function findByAttr($attr, $failIfEmpty=true) {
 		if(!is_array($attr))
 			throw new RepositoryException("Invalid attributes for function findOneByAttr in class {$this->model()}");
 
 		$query = self::query(false, false, $attr);
+
+		if($failIfEmpty === false)
+			return $query->firstOrNew();
+
 		return $query->firstOrFail();
 	}
 

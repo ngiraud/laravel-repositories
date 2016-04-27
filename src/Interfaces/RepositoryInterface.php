@@ -13,7 +13,7 @@ interface RepositoryInterface {
 
 	public function findOrNew($id);
 
-	public function findByAttr($attr);
+	public function findByAttr($attr, $failIfEmpty=true);
 
 	public function paginate($nb);
 
